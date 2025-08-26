@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Sudoku Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based Sudoku game built with modern JavaScript and CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Interactive Sudoku Board**: 9x9 grid with clickable cells
+- **Smart Number Input**: Keypad for entering numbers 1-9
+- **Game Validation**: Built-in Sudoku solution checker
+- **Responsive Design**: Clean, modern UI that works on different screen sizes
+- **New Game Generation**: Automatically generates new puzzles using a Sudoku algorithm
 
-### `npm start`
+## How to Play
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Start the Game**: The game automatically generates a new Sudoku puzzle
+2. **Select a Cell**: Click on any empty cell (white) to select it
+3. **Enter Numbers**: Use the number keypad (1-9) to fill in the selected cell
+4. **Erase Mistakes**: Use the "Erase" button to clear the selected cell
+5. **Check Solution**: Click "Check" to verify if your solution is correct
+6. **New Game**: Start a fresh puzzle with the "New Game" button
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Game Rules
 
-### `npm test`
+- Each row must contain the numbers 1-9 without repetition
+- Each column must contain the numbers 1-9 without repetition
+- Each 3x3 box must contain the numbers 1-9 without repetition
+- Fixed numbers (blue) cannot be changed
+- Empty cells (white) can be filled with your solution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technical Details
 
-### `npm run build`
+- **Frontend**: React 18 with Class Components
+- **Styling**: CSS with responsive design
+- **Algorithm**: Custom Sudoku puzzle generator and validator
+- **Build Tool**: Create React App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (version 14 or higher)
+- npm (comes with Node.js)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd sudoku
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+### Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+src/
+├── Components/          # React components
+│   ├── Board.js        # Main game board
+│   ├── Cell.js         # Individual cell component
+│   ├── Row.js          # Row component
+│   ├── Keypad.js       # Number input keypad
+│   └── KeypadCell.js   # Individual keypad button
+├── MiddleWare/          # Game logic
+│   └── GenerateBoard.js # Sudoku generator and validator
+├── Style_Sheets/        # CSS files
+│   ├── Board.css       # Board styling
+│   └── Cell.css        # Cell styling
+├── App.js              # Main app component
+├── Home.js             # Home page component
+└── index.js            # App entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Feel free to submit issues and enhancement requests!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the [MIT License](LICENSE).

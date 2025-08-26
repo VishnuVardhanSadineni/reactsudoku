@@ -11,7 +11,7 @@ class Cell extends React.Component{
     }
     render(){
         return(
-            <div className={"cell " + (this.props.selected?"selected ":"not_selected ")+(this.props.fixed_value==1?"fixed":"not_fixed")}  onClick={this.handleChange}>
+            <div className={"cell " + (this.props.selected ? "selected " : "not_selected ") + (this.props.fixed_value === 1 ? "fixed" : "not_fixed")} onClick={this.handleChange}>
                     <p className="value">
                         {this.props.value}
                     </p>
